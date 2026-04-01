@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Web Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="calculator" aria-label="Calculator">
+    <section class="display" aria-live="polite">
+      <div id="history" class="history">&nbsp;</div>
+      <input id="result" class="result" value="0" readonly aria-label="Display" />
+      <div id="historyList" class="history-list"></div>
+    </section>
+
+    <section class="toolbar">
+      <button id="toggleMode" class="btn mode">Scientific Mode</button>
+      <button id="toggleTheme" class="btn mode">Theme: Dark</button>
+      <button id="copyResult" class="btn mode">Copy</button>
+    </section>
+
+    <section class="buttons" id="standardBtnGrid">
+      <button class="btn function" data-action="clear">AC</button>
+      <button class="btn function" data-action="clear-entry">CE</button>
+      <button class="btn function" data-action="backspace">⌫</button>
+      <button class="btn operator" data-value="/">÷</button>
+
+      <button class="btn number" data-value="7">7</button>
+      <button class="btn number" data-value="8">8</button>
+      <button class="btn number" data-value="9">9</button>
+      <button class="btn operator" data-value="*">×</button>
+
+      <button class="btn number" data-value="4">4</button>
+      <button class="btn number" data-value="5">5</button>
+      <button class="btn number" data-value="6">6</button>
+      <button class="btn operator" data-value="-">−</button>
+
+      <button class="btn number" data-value="1">1</button>
+      <button class="btn number" data-value="2">2</button>
+      <button class="btn number" data-value="3">3</button>
+      <button class="btn operator" data-value="+">+</button>
+
+      <button class="btn number" data-value="0">0</button>
+      <button class="btn number" data-value=".">.</button>
+      <button class="btn function" data-action="toggle-sign">±</button>
+      <button class="btn function equal" data-action="equals">=</button>
+    </section>
+
+    <section class="buttons hidden" id="scientificBtnGrid">
+      <button class="btn function" data-action="pi">π</button>
+      <button class="btn function" data-action="e">e</button>
+      <button class="btn function" data-action="power">^</button>
+      <button class="btn function" data-action="sqrt">√</button>
+
+      <button class="btn function" data-action="sin">sin</button>
+      <button class="btn function" data-action="cos">cos</button>
+      <button class="btn function" data-action="tan">tan</button>
+      <button class="btn function" data-action="ln">ln</button>
+
+      <button class="btn function" data-action="log">log</button>
+      <button class="btn function" data-action="exp">exp</button>
+      <button class="btn function" data-action="mod">mod</button>
+      <button class="btn function" data-action="percent">%</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
